@@ -1,0 +1,33 @@
+{
+  "name": "DracarysModpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron .",
+    "cilinux": "node app/build.js WINDOWS && node build.js LINUX",
+    "cidarwin": "node app/build.js MAC",
+    "dist": "cross-env ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true node app/build.js",
+    "dist:win": "npm run dist -- WINDOWS",
+    "dist:mac": "npm run dist -- MAC",
+    "dist:linux": "npm run dist -- LINUX"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.5",
+    "electron-updater": "^4.3.5",
+    "http": "0.0.1-security",
+    "request": "^2.88.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeniallynx/DracarysModpack.git"
+  }
+}
