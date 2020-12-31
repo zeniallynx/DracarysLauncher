@@ -1,13 +1,13 @@
 {
-  "name": "DracarysModpack",
-  "version": "1.0.0",
+  "name": "DragonLauncher",
+  "version": "2.0.1",
   "description": "",
-  "main": "app/main.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "cilinux": "node app/build.js WINDOWS && node build.js LINUX",
-    "cidarwin": "node app/build.js MAC",
-    "dist": "cross-env ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true node app/build.js",
+    "cilinux": "node build.js WINDOWS && node build.js LINUX",
+    "cidarwin": "node build.js MAC",
+    "dist": "cross-env ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true node build.js",
     "dist:win": "npm run dist -- WINDOWS",
     "dist:mac": "npm run dist -- MAC",
     "dist:linux": "npm run dist -- LINUX"
@@ -21,10 +21,16 @@
     "cross-env": "^7.0.3"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
     "custom-electron-titlebar": "^3.2.5",
+    "ejs-electron": "^2.1.1",
     "electron-updater": "^4.3.5",
+    "fs-extra": "^9.0.1",
     "http": "0.0.1-security",
-    "request": "^2.88.2"
+    "md5-file": "^5.0.0",
+    "minecraft-server-status": "^1.0.1",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
   },
   "repository": {
     "type": "git",
